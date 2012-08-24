@@ -18,7 +18,7 @@ const NSInteger kVelocity = 640;
 
 
 // animate the navigation controller sideways
--(void) setVisibility:(Position)position {
+-(void) setPosition:(Position)position {
     [self slideToPosition:position withSpeed:kVelocity];
 }
 
@@ -46,13 +46,13 @@ const NSInteger kVelocity = 640;
 
 // toggle the visibility of this controller
 -(void) togglePosition {
-    Position inverse = ([self visibility]==PositionLeft) ? PositionRight : PositionLeft;
-    [self setVisibility:inverse];
+    Position inverse = ([self position]==PositionLeft) ? PositionRight : PositionLeft;
+    [self setPosition:inverse];
 }
 
 
 // tell whether the controller is partially or fully visible
--(Position) visibility {
+-(Position) position {
     return self.view.frame.origin.x==0 ? PositionLeft : PositionRight;
 }
 

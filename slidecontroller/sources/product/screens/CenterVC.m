@@ -73,6 +73,7 @@
     
     // press to slide the navigation controller
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]
+                                             // icon stolen from the facebook app
                                              initWithImage:[UIImage imageNamed:@"menu-icon.png"]
                                              style:UIBarButtonItemStyleBordered
                                              target:self
