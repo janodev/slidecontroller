@@ -17,23 +17,26 @@
 }
 
 
--(void) handleDrag:(UIPanGestureRecognizer *)recognizer
+-(void) handleDragGesture:(UIPanGestureRecognizer *)recognizer
 {
     UIView *navView = self.navigationController.view;
-    
     static CGFloat originX;
     
     switch (recognizer.state) {
+            
+        // Finger landed. Save the initial position..
         case UIGestureRecognizerStateBegan:{
             originX = navView.frame.origin.x;
             break;
         }
+            
+        // Finger is being dragged. Move the controller along with the finger.
         case UIGestureRecognizerStateChanged:{
             // new x coord is the origin + the distance to our fingertip
             CGPoint translation = [recognizer translationInView:navView];
             CGFloat newX = originX + translation.x;
             
-            // update only if we are between o and kSlideWidth
+            // update only if we are between 0 and kSlideWidth
             CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
             if (newX>0 && newX< (screenWidth-[self.navigationController minimumWidth])){
                 CGRect rect = navView.frame;
@@ -42,8 +45,9 @@
             }
             break;
         }
+        
+        // Finger lifted. Slide the controller to the nearest border.
         case UIGestureRecognizerStateEnded:{
-            // we lifted the finger
             CGPoint translation = [recognizer translationInView:navView];
             CGPoint velocity = [recognizer velocityInView:navView];
             CGFloat inertia = velocity.x * .1; // that's points per second * .1 seconds
@@ -56,6 +60,7 @@
             }
             break;
         }
+            
         default:{
             break;
         }
@@ -80,7 +85,7 @@
                                              action:@selector(handleBtnLeft:)];
     
     // gesture recognizer to read drag gestures
-    UIPanGestureRecognizer *recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleDrag:)];
+    UIPanGestureRecognizer *recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleDragGesture:)];
     [recognizer setMinimumNumberOfTouches:1];
     [recognizer setMaximumNumberOfTouches:1];
     [self.navigationController.view addGestureRecognizer:recognizer]; // make the whole bar draggable
@@ -108,3 +113,18 @@
 }
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

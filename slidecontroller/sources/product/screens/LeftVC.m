@@ -30,7 +30,7 @@ static const NSInteger kRows = 15;
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    cell.textLabel.text = [LeftVC nonce];
+    cell.textLabel.text = [LeftVC nonce]; // set a random text
     return cell;
 }
 
