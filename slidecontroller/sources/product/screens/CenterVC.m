@@ -91,7 +91,11 @@
     [self.navigationController.view addGestureRecognizer:recognizer]; // make the whole bar draggable
     
     // insert the left controller as a subview of the navigation controller parent
-    self.leftVC = [LeftVC new];
+    // self.leftVC = [LeftVC new];
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    self.leftVC = (LeftVC*)[storyboard instantiateViewControllerWithIdentifier:@"LeftVC"];;
+    
     [self.navigationController.view.superview insertSubview:self.leftVC.view belowSubview:self.navigationController.view];
     
     // nav controller shadow
