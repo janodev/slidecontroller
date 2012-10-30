@@ -24,6 +24,8 @@
 		3A65562315CF3B20004E4098 /* RightVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A65562115CF3B20004E4098 /* RightVC.m */; };
 		3A65562515CF3B20004E4098 /* RightVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A65562215CF3B20004E4098 /* RightVC.xib */; };
 		3A6BD4CC15E7276200C3CA02 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3A6BD4CB15E7276200C3CA02 /* README.md */; };
+		3A9DAA1D163FE0E300F56841 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A9DAA1C163FE0E300F56841 /* MainStoryboard.storyboard */; };
+		3A9DAA22163FE2BB00F56841 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A9DAA21163FE2BB00F56841 /* Default-568h@2x.png */; };
 		3AAC4FA315D063980022F9FA /* menu-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AAC4FA115D063980022F9FA /* menu-icon.png */; };
 		3AAC4FA515D063980022F9FA /* menu-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AAC4FA215D063980022F9FA /* menu-icon@2x.png */; };
 		3AB04AF015BC8B3C00F424AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB04AE915BC8B3C00F424AA /* AppDelegate.m */; };
@@ -53,6 +55,8 @@
 		3A65562115CF3B20004E4098 /* RightVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightVC.m; sourceTree = "<group>"; };
 		3A65562215CF3B20004E4098 /* RightVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightVC.xib; sourceTree = "<group>"; };
 		3A6BD4CB15E7276200C3CA02 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		3A9DAA1C163FE0E300F56841 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		3A9DAA21163FE2BB00F56841 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3AAC4FA115D063980022F9FA /* menu-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon.png"; sourceTree = "<group>"; };
 		3AAC4FA215D063980022F9FA /* menu-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon@2x.png"; sourceTree = "<group>"; };
 		3AB04ADF15BC8B1700F424AA /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 		3AB04AEE15BC8B3C00F424AA /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				3A9DAA21163FE2BB00F56841 /* Default-568h@2x.png */,
 				3AAC4FA115D063980022F9FA /* menu-icon.png */,
 				3AAC4FA215D063980022F9FA /* menu-icon@2x.png */,
 			);
@@ -188,6 +193,7 @@
 				3A65562215CF3B20004E4098 /* RightVC.xib */,
 				3A0FB21E15D7067000A6313F /* UINavigationController+Position.h */,
 				3A0FB21F15D7067000A6313F /* UINavigationController+Position.m */,
+				3A9DAA1C163FE0E300F56841 /* MainStoryboard.storyboard */,
 			);
 			name = screens;
 			path = slidecontroller/sources/product/screens;
@@ -251,6 +257,8 @@
 				3AAC4FA315D063980022F9FA /* menu-icon.png in Resources */,
 				3AAC4FA515D063980022F9FA /* menu-icon@2x.png in Resources */,
 				3A6BD4CC15E7276200C3CA02 /* README.md in Resources */,
+				3A9DAA1D163FE0E300F56841 /* MainStoryboard.storyboard in Resources */,
+				3A9DAA22163FE2BB00F56841 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

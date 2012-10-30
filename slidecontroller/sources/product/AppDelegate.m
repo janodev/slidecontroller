@@ -10,11 +10,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:[CenterVC new]];
-
-    self.window.rootViewController = navController;
-    [self.window makeKeyAndVisible];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    bool isStoryboarAvailable = storyboard!=nil;
+    if (!isStoryboarAvailable){
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:[CenterVC new]];
+        self.window.rootViewController = navController;
+        [self.window makeKeyAndVisible];
+    } 
     
     return YES;
 }
